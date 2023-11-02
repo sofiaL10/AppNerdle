@@ -41,7 +41,6 @@ class Instrucciones:
     
     
     """
-
     # Configurar la fuente y el ancho del Label
     font_style = ("Arial", 11)
     font_style_title = ("Arial", 16)

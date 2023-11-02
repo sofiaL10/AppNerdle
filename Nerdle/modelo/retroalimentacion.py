@@ -10,7 +10,7 @@ class Retroalimentacion:
         lista_retorno: list = ["" for i in ingreso]
         for i in range(len(self.ecuacion_actual)):
             if ingreso[i] not in self.ecuacion_actual:
-                lista_retorno[i] = "#969695"
+                lista_retorno[i] = "#808080"
             elif ingreso[i] in self.ecuacion_actual:
                 if self.ecuacion_actual[i] != ingreso[i]:
                     lista_retorno[i] = "#E8F65E"

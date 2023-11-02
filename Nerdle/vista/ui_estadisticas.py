@@ -19,10 +19,10 @@ class EstadisticasApp:
         self.create_plot()
 
     def create_widgets(self):
-        label = tk.Label(self.root, text="Estadísticas de Juego")
+        label = tk.Label(self.root, text="Estadísticas del Juego")
         label.pack(pady=10)
-        correo_label = tk.Label(self.root, text="¿Desea recibir sus estadísticas de juego por correo electrónico?"
-                                                " ingrese su email:")
+        correo_label = tk.Label(self.root, text="¿Desea recibir sus estadísticas de juego por correo electrónico?" \
+                                                "si es asi, ingrese su email:")
         correo_label.pack()
         self.correo_entry = tk.Entry(self.root)
         self.correo_entry.pack()

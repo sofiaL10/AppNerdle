@@ -55,7 +55,7 @@ class Inicio:
             except sqlite3.IntegrityError:
                 messagebox.showerror("Error", "El usuario ya existe")
         else:
-            messagebox.showerror("Error", "Por favor, ingresa usuario y contraseña.")
+            messagebox.showerror("Error", "Por favor, ingrese usuario y contraseña.")
 
     def iniciar_sesion(self):
         usuario = self.entry_usuario.get()

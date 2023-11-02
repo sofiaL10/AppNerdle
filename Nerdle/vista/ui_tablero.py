@@ -15,7 +15,7 @@ contenedor_tablero.pack()
 # crea la clase Nerdle
 nerdle: Nerdle = Nerdle()
 nerdle.iniciar_nuevo_juego()
-
+print(nerdle.ecuacion)
 
 def crear_celda(fila_celda, columna_celda):
     celda = tk.Label(contenedor_tablero, text=" ", width=8, height=2, relief="ridge")
@@ -93,15 +93,17 @@ def boton_ingresar_clic():
             update = nerdle.estado_del_juego(ingreso=entrada)
 
             if nerdle.intentos <= 0 and entrada != nerdle.ecuacion:
-                messagebox.showerror("PIERDES", f"La ecuacion era {nerdle.ecuacion}")
                 nerdle.anunciar_perdedor()
+                messagebox.showinfo("PIERDES", f"La ecuacion era {nerdle.ecuacion}")
+
             else:
                 nerdle.intentos -= 1
                 for i in range(8):
                     celdas_tablero[fila_activa][i].config(bg=f"{update[i]}", fg="black")
                 if entrada == nerdle.ecuacion:
-                    messagebox.showerror("GANAS", f"FELICIDADES")
                     nerdle.anunciar_ganador()
+                    messagebox.showinfo("GANAS", f"FELICIDADES")
+
 
             fila_activa += 1
             casilla_activa = 0

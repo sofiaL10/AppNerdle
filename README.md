@@ -42,6 +42,7 @@ de sus los intentos en cada juego realizado. El gráfico se debe poder enviar po
 ## Modelo del mundo del problema 
 ![modelo del mundo del problema](assets/mundo_problema.drawio.png)
 
+
 ## Modelo del mundo del problema con interfaz agregada
 ![segundo modelo del mundo del problema](assets/Nuevo_modelo.drawio%20(1).png)
 

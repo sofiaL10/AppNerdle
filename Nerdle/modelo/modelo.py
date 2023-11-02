@@ -52,23 +52,23 @@ class Nerdle(Ecuacion):
     la ecuacion real"""
 
     def anunciar_ganador(self):
-        self.estadisticas.numeros[1] += 1
+        Estadisticas.numeros[1] += 1
         print("gana")
 
         if self.intentos >= 5:
-            self.estadisticas.numeros[2] += 1
+            Estadisticas.numeros[2] += 1
         elif self.intentos >= 4:
-            self.estadisticas.numeros[3] += 1
+            Estadisticas.numeros[3] += 1
         elif self.intentos >= 3:
-            self.estadisticas.numeros[4] += 1
+            Estadisticas.numeros[4] += 1
         elif self.intentos >= 2:
-            self.estadisticas.numeros[5] += 1
+            Estadisticas.numeros[5] += 1
         else:
-            self.estadisticas.numeros[6] += 1
+            Estadisticas.numeros[6] += 1
 
     def anunciar_perdedor(self):
         print("pierde")
-        self.estadisticas.numeros[0] += 1
+        Estadisticas.numeros[0] += 1
 
 
     """ Estado del juego se encarga de recibir lo que el usuario ingreso y determinar si, en base a la 
