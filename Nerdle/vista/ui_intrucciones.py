@@ -7,7 +7,7 @@ class Instrucciones:
     ventana.title("Instrucciones")
 
     # configuracion ventana
-    ancho = 800
+    ancho = 750
     alto = 480
     ventana.geometry(f"{ancho}x{alto}")
     ventana.configure(bg="#7ED957")

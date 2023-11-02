@@ -167,12 +167,14 @@ boton_ingresar.grid(row=fila_boton_ingresar, column=columna_boton_ingresar, padx
 # Función para abrir el otro programa
 def abrir_intrucciones():
     try:
-        subprocess.Popen(["python", "ui_intrucciones.py"])
+        subprocess.Popen(["python", "Nerdle/vista/ui_intrucciones.py"])
     except FileNotFoundError:
         print("El archivo del otro programa no se encuentra.")
 
 
 boton_intrucciones = tk.Button(ventana, text=" Ver instrucciones", command=abrir_intrucciones, bg="#7ED957")
 boton_intrucciones.pack()
+
+
 
 ventana.mainloop()

@@ -7,6 +7,7 @@ class Ecuacion:
         self.numeros: list = [random.randint(1, 9) for _ in range(3)]  # Generar 4 números enteros de 0 a 9
         self.ecuacion: list = []
         self.operadores: list = ["*", "/", "+", "-"]
+
     """ metodo confirmar logica se encarga de analizar la ecuacion generada y obtener el resultado de la misma"""
 
     def confirmar_logica(self, _lista: list) -> int:

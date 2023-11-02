@@ -65,14 +65,14 @@ class Inicio:
             self.cursor.execute("SELECT * FROM usuarios WHERE usuario = ? AND contraseña = ?", (usuario, password))
             if self.cursor.fetchone() is not None:
                 try:
-                    subprocess.Popen(["python", "ui_menu.py"])
+                    # Ejecuta "ui_menu.py" en la misma ubicación que este archivo
+                    subprocess.Popen(["python", "Nerdle/vista/ui_menu.py"])
                 except FileNotFoundError:
                     print("El archivo del menú no se encuentra.")
             else:
                 messagebox.showerror("Error", "Usuario o contraseña incorrectos")
         else:
             messagebox.showerror("Error", "Por favor, ingresa usuario y contraseña.")
-
 
 if __name__ == "__main__":
     app = Inicio()
