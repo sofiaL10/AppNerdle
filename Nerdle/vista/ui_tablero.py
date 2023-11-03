@@ -175,6 +175,22 @@ def abrir_intrucciones():
 boton_intrucciones = tk.Button(ventana, text=" Ver instrucciones", command=abrir_intrucciones, bg="#7ED957")
 boton_intrucciones.pack()
 
+def boton_reiniciar_clic():
+    global casilla_activa
+    global fila_activa
+    casilla_activa = 0
+    fila_activa = 0
 
+    for fila in celdas_tablero:
+        for celda in fila:
+            celda.config(text=" ", bg="white", fg="black")
+
+    while boton_reiniciar is True:
+        ecuacion: list = super().generar_ecuacion()
+        return ecuacion
+
+
+boton_reiniciar = tk.Button(ventana, text="Volver a jugar", width=14, height=1, command=boton_reiniciar_clic, bg="#7ED957")
+boton_reiniciar.pack()
 
 ventana.mainloop()

@@ -1,25 +1,25 @@
-from matplotlib import pyplot as plt
+import matplotlib
+import matplotlib.pyplot as plt
+matplotlib.use('TkAgg')
 
 
 class Estadisticas:
-    datos = ["partidas_perdidas", "partidas_ganadas",
-             "ganadas_en_un_intento",
-             "ganadas_en_dos_intentos",
-             "ganadas_en_tres_intentos",
-             "ganadas_en_cuatro_intentos",
-             "ganadas_en_mas_de_cinco_intentos"]
-    numeros: list = [0, 0, 0, 0, 0, 0, 0]
 
-    def actualizar_estadisticas(self, resultado_partida):
-        # Actualiza las estadísticas según el resultado de la partida
-        if resultado_partida in Estadisticas.datos:
-            index = Estadisticas.datos.index(resultado_partida)
-            Estadisticas.numeros[index] += 1
+    numeros = None
 
-    @staticmethod
-    def crear_grafica():
+    def __init__(self):
+        self.datos = ["partidas_perdidas", "partidas_ganadas",
+                      "ganadas en un intento",
+                      "ganadas en 2 intentos",
+                      "ganadas en 3 intentos",
+                      "ganadas en 4 intentos",
+                      "ganadas en mas de 5 intentos"]
+
+        self.numeros = [4, 0, 3, 1, 2, 9, 8]
+
+    def crear_grafica(self):
         fig, ax = plt.subplots(figsize=(10, 5), constrained_layout=True)
-        ax.bar(Estadisticas.datos, Estadisticas.numeros)
+        ax.bar(self.datos, self.numeros)
         ax.tick_params(axis='x', labelsize=6)
         ax.tick_params(axis='y', labelsize=8)
 

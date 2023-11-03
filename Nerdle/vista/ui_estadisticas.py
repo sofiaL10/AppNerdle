@@ -19,10 +19,10 @@ class EstadisticasApp:
         self.create_plot()
 
     def create_widgets(self):
-        label = tk.Label(self.root, text="Estadísticas del Juego")
+        label = tk.Label(self.root, text="Estadísticas de Juego")
         label.pack(pady=10)
-        correo_label = tk.Label(self.root, text="¿Desea recibir sus estadísticas de juego por correo electrónico?" \
-                                                "si es asi, ingrese su email:")
+        correo_label = tk.Label(self.root, text="¿Desea recibir sus estadísticas de juego por correo electrónico?"
+                                                " ingrese su email:")
         correo_label.pack()
         self.correo_entry = tk.Entry(self.root)
         self.correo_entry.pack()
@@ -57,7 +57,7 @@ class EstadisticasApp:
 
         # Guardar la gráfica como imagen
         self.fig.savefig('grafica.png', format='png')
-        with open('../../assets/grafica.png', 'rb') as img_file:
+        with open('Nerdle/assets/grafica.png', 'rb') as img_file:
             img = MIMEImage(img_file.read())
             img.add_header('Content-Disposition', 'attachment', filename="../../assets/grafica.png")
             msg.attach(img)

@@ -40,7 +40,7 @@ tener la opción de ver las estadísticas del juego donde se le mostrará un gr�
 de sus los intentos en cada juego realizado. El gráfico se debe poder enviar por correo electrónico.
 
 ## Modelo del mundo del problema 
-![modelo del mundo del problema](assets/mundo_problema.drawio.png)
+![modelo del mundo del problema](assets/modelo_antiguo.jpeg)
 
 
 ## Modelo del mundo del problema con interfaz agregada

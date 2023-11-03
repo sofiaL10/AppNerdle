@@ -16,8 +16,10 @@ class Nerdle(Ecuacion):
         self.retroalimentacion = None
         self.nombre_jugador: str = ""
         self.contraseña: str = ""
-        self.intentos: int = 5
+        self.intentos: int = 5  # Add this line to initialize intentos
         self.estadisticas: Estadisticas = Estadisticas()
+
+        # ... rest of your Nerdle class code
 
     def registrar_nombre_jugador(self, nombre_jugador: str) -> str:
         self.nombre_jugador = nombre_jugador
@@ -52,23 +54,21 @@ class Nerdle(Ecuacion):
     la ecuacion real"""
 
     def anunciar_ganador(self):
-        Estadisticas.numeros[1] += 1
-        print("gana")
+        self.estadisticas.numeros[1] += 1
 
         if self.intentos >= 5:
-            Estadisticas.numeros[2] += 1
+            self.estadisticas.numeros[2] += 1
         elif self.intentos >= 4:
-            Estadisticas.numeros[3] += 1
+            self.estadisticas.numeros[3] += 1
         elif self.intentos >= 3:
-            Estadisticas.numeros[4] += 1
+            self.estadisticas.numeros[4] += 1
         elif self.intentos >= 2:
-            Estadisticas.numeros[5] += 1
+            self.estadisticas.numeros[5] += 1
         else:
-            Estadisticas.numeros[6] += 1
+            self.estadisticas.numeros[6] += 1
 
     def anunciar_perdedor(self):
-        print("pierde")
-        Estadisticas.numeros[0] += 1
+        self.estadisticas.numeros[0] += 1
 
 
     """ Estado del juego se encarga de recibir lo que el usuario ingreso y determinar si, en base a la 
@@ -81,4 +81,3 @@ class Nerdle(Ecuacion):
         lista = self.retroalimentar(ingreso)
 
         return lista
-

@@ -32,11 +32,14 @@ boton_intrucciones.grid(row=2, column=1, padx=10)
 
 def ver_estadistica():
     estadisticas = Estadisticas()
-    fig = estadisticas.crear_grafica()
     try:
-        subprocess.Popen(["python", "Nerdle/vista/ui_estadisticas.py"])
+        fig = estadisticas.crear_grafica()
+        if fig is not None:
+            subprocess.Popen(["python", "Nerdle/vista/ui_estadisticas.py"])
+        else:
+            print("Failed to generate statistics graph.")
     except FileNotFoundError:
-        print("El archivo no se encuentra")
+        print("The file is not found.")
 
 
 boton_estadistica = tk.Button(ventana_principal, text="ESTADÍSTICAS", command=ver_estadistica, bg="#7ED957", fg="white")

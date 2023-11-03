@@ -1,4 +1,3 @@
-
 class Retroalimentacion:
 
     def __init__(self, ecuacion: list):
