@@ -16,10 +16,9 @@ class Nerdle(Ecuacion):
         self.retroalimentacion = None
         self.nombre_jugador: str = ""
         self.contraseña: str = ""
-        self.intentos: int = 5  # Add this line to initialize intentos
+        self.intentos: int = 5  
         self.estadisticas: Estadisticas = Estadisticas()
 
-        # ... rest of your Nerdle class code
 
     def registrar_nombre_jugador(self, nombre_jugador: str) -> str:
         self.nombre_jugador = nombre_jugador
