@@ -24,7 +24,7 @@ class Nerdle(Ecuacion):
         self.nombre_jugador = nombre_jugador
         return self.nombre_jugador
 
-    def registrar_correo_jugador(self, contraseña: str) -> str:
+    def registrar_contraseña_jugador(self, contraseña: str) -> str:
         self.contraseñar = contraseña
         return self.contraseña
 
