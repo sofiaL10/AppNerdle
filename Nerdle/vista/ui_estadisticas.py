@@ -57,7 +57,7 @@ class EstadisticasApp:
 
         # Guardar la gráfica como imagen
         self.fig.savefig('grafica.png', format='png')
-        with open('Nerdle/assets/grafica.png', 'rb') as img_file:
+        with open('grafica.png', 'rb') as img_file:
             img = MIMEImage(img_file.read())
             img.add_header('Content-Disposition', 'attachment', filename="../../assets/grafica.png")
             msg.attach(img)
